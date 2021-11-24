@@ -437,7 +437,7 @@ class RPICAM2DNG:
         dngTemplate.write()
 
         if file_output:
-            outputDNG = image[:-4] + '.dng'
+            outputDNG = os.path.splitext(image)[0]+".dng"
             outfile = open(outputDNG, "wb")
             outfile.write(buf)
             outfile.close()
